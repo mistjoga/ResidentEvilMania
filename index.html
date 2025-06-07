@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resident Evil Mania</title>
+  <!-- Fonte estilo "Press Start 2P" para vibe gamer retrô -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0b0b0b;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #e63946;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2.5rem;
+      letter-spacing: 5px;
+      text-shadow: 0 0 10px #e63946, 0 0 20px #e63946;
+      box-shadow: 0 0 10px #e63946;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #1c1c1c;
+      padding: 10px 0;
+      box-shadow: 0 0 8px #e63946;
+    }
+    nav button {
+      background: transparent;
+      color: #fff;
+      border: none;
+      font-size: 1.1rem;
+      margin: 5px 15px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    nav button:hover,
+    nav button.active {
+      color: #e63946;
+      font-weight: bold;
+    }
+    .tab-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #111;
+      padding: 10px 0;
+      margin-top: 10px;
+    }
+    .tab-menu a {
+      color: #fff;
+      margin: 5px 10px;
+      text-decoration: none;
+      border: 1px solid #e63946;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .tab-menu a:hover {
+      background: #e63946;
+      color: #000;
+    }
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #e63946;
+      text-align: center;
+    }
+    .content img {
+      max-width: 250px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 8px #e63946);
+    }
+    .content h2 {
+      color: #e63946;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      border-top: 1px solid #333;
+    }
+    footer a {
+      color: #e63946;
+      text-decoration: none;
+    }
+    /* Estilo específico para links no conteúdo de contato */
+    .contact-links a {
+      display: inline-block;
+      margin: 10px 15px;
+      color: #e63946;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .contact-links a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>Resident Evil Mania</header>
+
+  <nav>
+    <button class="active" onclick="showTab('leon', event)">Leon</button>
+    <button onclick="showTab('chris', event)">Chris</button>
+    <button onclick="showTab('jill', event)">Jill</button>
+    <button onclick="showTab('ada', event)">Ada</button>
+    <button onclick="showTab('wesker', event)">Albert Wesker</button>
+    <button onclick="showTab('rebecca', event)">Rebecca Chambers</button>
+    <button onclick="showTab('claire', event)">Claire Redfield</button>
+    <button onclick="showTab('ethan', event)">Ethan Winters</button>
+    <button onclick="showTab('contato', event)">Contato</button>
+  </nav>
+
+  <div class="tab-menu">
+    <a href="https://store.steampowered.com/app/304240" target="_blank">Resident Evil (1996)</a>
+    <a href="https://store.steampowered.com/app/883710" target="_blank">Resident Evil 2 (1998)</a>
+    <a href="https://store.steampowered.com/app/952060" target="_blank">Resident Evil 3 (1999)</a>
+    <a href="https://store.steampowered.com/app/254700" target="_blank">Resident Evil 4 (2005)</a>
+    <a href="https://store.steampowered.com/app/21690" target="_blank">Resident Evil 5 (2009)</a>
+    <a href="https://store.steampowered.com/app/221040" target="_blank">Resident Evil 6 (2012)</a>
+    <a href="https://store.steampowered.com/app/418370" target="_blank">Resident Evil 7 (2017)</a>
+    <a href="https://store.steampowered.com/app/1196590" target="_blank">Resident Evil Village (2021)</a>
+  </div>
+
+  <div class="content" id="leon">
+    <img src="https://w7.pngwing.com/pngs/956/1004/png-transparent-resident-evil-4-resident-evil-6-leon-s-kennedy-resident-evil-damnation-resident-evil-zero-resident-evil-video-game-weapon-ada-wong-thumbnail.png" alt="Leon" />
+    <h2>Leon S. Kennedy</h2>
+    <p>Leon Kennedy é um ex-policial e um dos protagonistas mais queridos da franquia Resident Evil. Ele participou de eventos marcantes em Raccoon City, na Espanha, e em diversas missões contra o bioterrorismo.</p>
+  </div>
+
+  <div class="content" id="chris" style="display: none;">
+    <img src="https://w7.pngwing.com/pngs/490/396/png-transparent-resident-evil-6-resident-evil-5-chris-redfield-resident-evil-revelations-resident-evil-4-resident-evil-video-game-infantry-troop-thumbnail.png" alt="Chris" />
+    <h2>Chris Redfield</h2>
+    <p>Chris é um veterano da série, conhecido por sua força e dedicação em destruir armas biológicas. Membro da S.T.A.R.S. e depois da BSAA, ele combateu a Umbrella e outras corporações criminosas.</p>
+  </div>
+
+  <div class="content" id="jill" style="display: none;">
+    <img src="https://w7.pngwing.com/pngs/126/531/png-transparent-jill-valentine-blender-rendering-jill-valentine-blender-jill-valentine-rendering-thumbnail.png" alt="Jill" />
+    <h2>Jill Valentine</h2>
+    <p>Jill Valentine é uma das fundadoras da S.T.A.R.S. e é lembrada por sua bravura em Raccoon City. Ela enfrentou a Umbrella em várias ocasiões e é uma das maiores heroínas da saga.</p>
+  </div>
+
+  <div class="content" id="ada" style="display: none;">
+    <img src="https://w7.pngwing.com/pngs/768/170/png-transparent-ada-wong-thumbnail.png" alt="Ada Wong" />
+    <h2>Ada Wong</h2>
+    <p>Ada Wong é uma misteriosa agente com habilidades excepcionais em espionagem e combate. Sua lealdade ambígua a torna um dos personagens mais intrigantes da franquia.</p>
+  </div>
+
+  <div class="content" id="wesker" style="display: none;">
+    <img src="https://w7.pngwing.com/pngs/146/611/png-transparent-resident-evil-the-umbrella-chronicles-resident-evil-the-mercenaries-3d-albert-wesker-leon-s-kennedy-albert-wesker-stars-leather-video-game-thumbnail.png" alt="Albert Wesker" />
+    <h2>Albert Wesker</h2>
+    <p>Albert Wesker é um antagonista icônico da série, conhecido por sua inteligência, força sobre-humana e manipulação de vírus para alcançar seus objetivos sombrios.</p>
+  </div>
+
+  <div class="content" id="rebecca" style="display: none;">
+    <img src="https://w7.pngwing.com/pngs/368/920/png-transparent-rebecca-chambers-thumbnail.png" alt="Rebecca Chambers" />
+    <h2>Rebecca Chambers</h2>
+    <p>Rebecca é uma médica e membro original da S.T.A.R.S., que usa seus conhecimentos científicos para ajudar sua equipe e sobreviver aos horrores de Raccoon City.</p>
+  </div>
+
+  <div class="content" id="claire" style="display: none;">
+    <img src="https://w7.pngwing.com/pngs/843/7/png-transparent-resident-evil-the-darkside-chronicles-resident-evil-2-resident-evil-operation-raccoon-city-claire-redfield-chris-redfield-claire-redfield-video-game-arm-claire-redfield-thumbnail.png" alt="Claire Redfield" />
+    <h2>Claire Redfield</h2>
+    <p>Claire é irmã de Chris Redfield, conhecida por sua coragem e determinação em encontrar seu irmão enquanto enfrenta os terrores do surto em Raccoon City.</p>
+  </div>
+
+  <div class="content" id="ethan" style="display: none;">
+    <img src="https://pm1.aminoapps.com/8631/9ec8b7c7e80ae1f632d3b1dc2054fb496adc79bbr1-693-442v2_hq.jpg" alt="Ethan Winters" />
+    <h2>Ethan Winters</h2>
+    <p>Ethan é o protagonista dos jogos Resident Evil 7 e Village, conhecido por sua luta desesperada para salvar sua família e escapar das ameaças biológicas.</p>
+  </div>
+
+  <div class="content" id="contato" style="display: none;">
+    <h2>Contato</h2>
+    <p>Quer falar comigo? Manda um e-mail ou dá uma olhada no meu canal do YouTube!</p>
+    <div class="contact-links">
+      <a href="mailto:acessoriadomist2025@gmail.com" target="_blank" rel="noopener noreferrer">acessoriadomist2025@gmail.com</a><br />
+      <a href="https://www.youtube.com/@oMistJoga" target="_blank" rel="noopener noreferrer">Canal do YouTube: oMistJoga</a>
+    </div>
+  </div>
+
+  <footer>
+    Resident Evil Mania &copy; 2025 — Criado por Você<br />
+    <a href="https://capcom.com" target="_blank">Site oficial Capcom</a>
+  </footer>
+
+  <script>
+    function showTab(id, event) {
+      document.querySelectorAll('.content').forEach(content => {
+        content.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+
+      document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>
