@@ -107,6 +107,19 @@
       color: #e63946;
       text-decoration: none;
     }
+    /* Estilo específico para links no conteúdo de contato */
+    .contact-links a {
+      display: inline-block;
+      margin: 10px 15px;
+      color: #e63946;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .contact-links a:hover {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -121,6 +134,7 @@
     <button onclick="showTab('rebecca', event)">Rebecca Chambers</button>
     <button onclick="showTab('claire', event)">Claire Redfield</button>
     <button onclick="showTab('ethan', event)">Ethan Winters</button>
+    <button onclick="showTab('contato', event)">Contato</button>
   </nav>
 
   <div class="tab-menu">
@@ -182,6 +196,15 @@
     <p>Ethan é o protagonista dos jogos Resident Evil 7 e Village, conhecido por sua luta desesperada para salvar sua família e escapar das ameaças biológicas.</p>
   </div>
 
+  <div class="content" id="contato" style="display: none;">
+    <h2>Contato</h2>
+    <p>Quer falar comigo? Manda um e-mail ou dá uma olhada no meu canal do YouTube!</p>
+    <div class="contact-links">
+      <a href="mailto:acessoriadomist2025@gmail.com" target="_blank" rel="noopener noreferrer">acessoriadomist2025@gmail.com</a><br />
+      <a href="https://www.youtube.com/@oMistJoga" target="_blank" rel="noopener noreferrer">Canal do YouTube: oMistJoga</a>
+    </div>
+  </div>
+
   <footer>
     Resident Evil Mania &copy; 2025 — Criado por Você<br />
     <a href="https://capcom.com" target="_blank">Site oficial Capcom</a>
@@ -189,10 +212,15 @@
 
   <script>
     function showTab(id, event) {
-      document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
-      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.content').forEach(content => {
+        content.style.display = 'none';
+      });
       document.getElementById(id).style.display = 'block';
-      event.target.classList.add('active');
+
+      document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.currentTarget.classList.add('active');
     }
   </script>
 </body>
