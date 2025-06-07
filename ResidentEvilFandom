@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resident Evil Mania - Personagens e Jogos</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 2px solid #990000;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #cc0000;
+      text-shadow: 1px 1px 5px #660000;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: #cc0000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff3333;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .character {
+      background-color: #222;
+      border: 1px solid #990000;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 0 10px #660000;
+    }
+    .character img {
+      width: 120px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #cc0000;
+    }
+    .character-info {
+      flex: 1;
+    }
+    .character-info h2 {
+      color: #ff4444;
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+      text-shadow: 1px 1px 3px #550000;
+    }
+    .character-info p {
+      font-size: 1rem;
+      color: #ddd;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Resident Evil Mania</h1>
+  </header>
+
+  <nav>
+    <a href="#personagens">Personagens</a>
+    <a href="#jogos">Jogos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="personagens">
+    <h2 style="color:#cc0000; margin-bottom:20px; text-align:center;">Personagens Famosos</h2>
+
+    <div class="character">
+      <img src="https://upload.wikimedia.org/wikipedia/en/6/65/Leon_Kennedy_Biohazard_4.png" alt="Leon S. Kennedy" />
+      <div class="character-info">
+        <h2>Leon S. Kennedy</h2>
+        <p>Um dos protagonistas mais famosos da franquia, conhecido por sua coragem e habilidades excepcionais. Estreou em Resident Evil 2.</p>
+      </div>
+    </div>
+
+    <div class="character">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Jill_Valentine_Resident_Evil_3_cover_art.jpg" alt="Jill Valentine" />
+      <div class="character-info">
+        <h2>Jill Valentine</h2>
+        <p>Agente da S.T.A.R.S., uma das primeiras protagonistas da série. Conhecida por sua inteligência e bravura.</p>
+      </div>
+    </div>
+
+    <div class="character">
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Chris_Redfield_Resident_Evil_5_cover_art.jpg" alt="Chris Redfield" />
+      <div class="character-info">
+        <h2>Chris Redfield</h2>
+        <p>Veterano da equipe S.T.A.R.S. e personagem principal de vários jogos, reconhecido por sua força e determinação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="jogos" style="margin-top: 50px;">
+    <h2 style="color:#cc0000; margin-bottom: 20px; text-align:center;">Jogos da Franquia</h2>
+    <ul style="max-width: 600px; margin: auto; color: #eee; font-size: 1.1rem; list-style-type:none; padding-left:0;">
+      <li>Resident Evil (1996)</li>
+      <li>Resident Evil 2 (1998)</li>
+      <li>Resident Evil 3: Nemesis (1999)</li>
+      <li>Resident Evil Code: Veronica (2000)</li>
+      <li>Resident Evil 4 (2005)</li>
+      <li>Resident Evil 5 (2009)</li>
+      <li>Resident Evil 6 (2012)</li>
+      <li>Resident Evil 7: Biohazard (2017)</li>
+      <li>Resident Evil Village (2021)</li>
+    </ul>
+  </section>
+
+  <section id="contato" style="margin-top: 50px; text-align:center;">
+    <h2 style="color:#cc0000; margin-bottom: 10px;">Contato</h2>
+    <p>Site criado por <strong>MistJoga</strong> — fã de Resident Evil.</p>
+    <p>Email: mistjoga@email.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Resident Evil Mania - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
